@@ -1,0 +1,42 @@
+<div class="col-md-12 text-center mt-3" *ngIf="!category">
+
+    Cargando...
+
+    <br>
+
+    <span class="invalid-feedback d-block text-center">
+        Si este proceso tarda mucho, vuelva a cargar la pagina.
+    </span>
+
+</div>
+
+
+<div class="container-fluid mt-3" *ngIf="category">
+    
+    <h1 class="text-center">{{category.name}}</h1>
+
+    <hr>
+
+    <div class="col-md-12 text-center mt-3" *ngIf="!posts">
+
+            Cargando listado...
+        
+            <br>
+        
+            <span class="invalid-feedback d-block text-center">
+                Si este proceso tarda mucho, vuelva a cargar la pagina.
+            </span>
+        
+    </div>
+
+    <div class=" alert alert-warning col-md-12 text-center mt-3" *ngIf="posts && posts.length == 0">
+            No existe ningun post en esta categoria todavia.  
+    </div>
+
+           <!--LISTADO DE POSTS-->
+           <post-list   [posts]="posts"
+                        [identity]="identity"
+                        [url]="url">        </post-list>
+
+
+</div>

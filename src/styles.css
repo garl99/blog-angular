@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+.avatar_edit{
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.avatar_mask{
+    width: 40px;
+    height: 40px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.avatar_mask img{
+    height: 50px;
+}
+
+.avatar_mask_profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.avatar_mask_profile img{
+    height: 80px;
+}
+
+.card-header a{
+    color: #444;
+
+}
+
+.post-image{
+    height: 200px;
+    overflow: hidden;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+  }
+body {
+    margin: 0;
+    margin-bottom: 40px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: gray;
+  }

@@ -1,0 +1,25 @@
+<div class="col-md-12 text-center" *ngIf="!post">
+
+    Cargando...
+
+    <br>
+
+    <span class="invalid-feedback d-block text-center">
+        Si este proceso tarda mucho, vuelva a cargar la pagina.
+    </span>
+
+</div>
+
+<div class="col-md-12" *ngIf="post">
+
+    <h2 class="mt-5 text-center">{{post.title}}</h2>
+
+    <h6>Autor: <a [routerLink]="['/perfil', post.user.id]" >{{post.user.name}} {{post.user.surname}}</a> | {{post.category.name}}</h6>
+
+    <hr>
+
+    <p [innerHtml]="post.content"></p>
+
+    
+
+</div>
